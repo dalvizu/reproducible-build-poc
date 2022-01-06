@@ -12,6 +12,7 @@ then add `jenv local 17.0.1` to lock java version
 
 ## `experiment-0/`
 
+
 No changes 
 
 ```
@@ -21,7 +22,13 @@ mvn clean install; cp target/*.jar results/2.jar` to produce results/2.jar
 diffoscope results/1.jar results/2.jar > results/diffoscope-results.txt
 ```
 
-**Proves:**
+### Observations
+
+diffoscope reveals timestamps and bits within the archive are a little different: both
+`.class` files and `META-INF/*` files are different - presumably this is timestamped
+data. Additionally the 'zipinfo' file contains timestamps.
+
+### Conclusions
 
 Maven is capable of running on the same inputs and producing a non
 identical bit by bit .jar as output
@@ -61,18 +68,17 @@ Define `project.build.outputTimestamp` property:
 
 run `./experiment.sh`
 
-**Proves**
+### Observations
+
+Both produced artifacts are bit by bit identical copies
+
+### Conclusion
 
 Maven is capable of making an identical bit-by-bit .jar when run on the same computer
-with the same JDK
+with the same JDK, when that archive contains a single class file.
 
 
 ## `experiment-2`
 
-TODO: Vagrant of different OS?
-
-
-
-
-
+More files! How about building a full project?
 
