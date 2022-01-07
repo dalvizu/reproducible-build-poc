@@ -80,5 +80,32 @@ with the same JDK, when that archive contains a single class file.
 
 ## `experiment-2`
 
-More files! How about building a full project?
+This experiment compared the build on two different computers
+with two different kernels and chipsets:
 
+  * an Ubuntu 20.04 OS with amd64 CPU architecture
+  * a macbook with m1 arm cpu
+
+Additionally, two files were added (App2.java App3.java).
+
+Steps:
+
+```
+brew install vagrant
+vagrant plugin install vagrant-exec
+vagrant plugin install vagrant-scp
+gcloud auth application-default login
+vagrant up
+./experiment.sh
+vagrant destroy --force
+```
+
+### Observations
+
+Both produced artifacts are bit by bit identical copies
+
+### Conclusion
+
+Maven is capable of making an identical bit-by-bit .jar when run on
+different unix derivative OS and similar versions of the JDK
+on a simple application

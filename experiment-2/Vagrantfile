@@ -1,0 +1,27 @@
+$script = <<-SCRIPT
+echo I am provisioning...
+date > /etc/vagrant_provisioned_at
+pushd $(mktemp -d)
+wget -q https://download.java.net/java/GA/jdk17/0d483333a00540d886896bac774ff48b/35/GPL/openjdk-17_linux-x64_bin.tar.gz
+sudo tar xvf openjdk-17_linux-x64_bin.tar.gz
+sudo mv jdk-17 /opt/
+echo 'export JAVA_HOME=/opt/jdk-17' >> /home/dan.alvizu/.bashrc
+echo 'export PATH=$PATH:$JAVA_HOME/bin' >> /home/dan.alvizu/.bashrc
+source ~/.bashrc
+popd
+
+SCRIPT
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "google/gce"
+  config.vm.provision "shell", inline: $script
+  config.vm.provider :google do |google, override|
+    google.google_project_id = "dalvizu"
+    google.image_family = 'ubuntu-2004-lts'
+
+    override.ssh.username = "dan.alvizu"
+    override.ssh.private_key_path = "~/.ssh/id_ed25519"
+  end
+  config.vm.synced_folder ".", "/vagrant", type: "rsync"
+  config.exec.commands '*', directory: '/vagrant'
+end
