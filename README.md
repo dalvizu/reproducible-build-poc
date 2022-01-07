@@ -109,3 +109,30 @@ Both produced artifacts are bit by bit identical copies
 Maven is capable of making an identical bit-by-bit .jar when run on
 different unix derivative OS and similar versions of the JDK
 on a simple application
+
+## `experiment-3`
+
+Different versions of JDK
+
+Macbook:
+```
+openjdk version "11.0.12" 2021-07-20
+OpenJDK Runtime Environment Homebrew (build 11.0.12+0)
+OpenJDK 64-Bit Server VM Homebrew (build 11.0.12+0, mixed mode)
+```
+
+Ubuntu:
+```
+openjdk version "17" 2021-09-14
+OpenJDK Runtime Environment (build 17+35-2724)
+OpenJDK 64-Bit Server VM (build 17+35-2724, mixed mode, sharing)
+```
+
+### Observations
+
+Both produced artifacts are bit by bit identical copies
+
+### Conclusion
+
+Maven is capable of making an identical bit-by-bit .jar when run on
+different versions of OpenJDK
