@@ -1,0 +1,26 @@
+$script = <<-SCRIPT
+
+# Not bothering how to do this in vagrant or winrm or all that
+# things because I dont want to learn them
+
+# install chocolatey:
+# choco install openjdk
+# choco install git
+# git clone git@github.com/dalvizu/reproducibile-build-poc.git
+
+SCRIPT
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "google/gce"
+  config.vm.provision "shell", inline: $script
+  config.vm.provider :google do |google, override|
+    google.google_project_id = "dalvizu"
+    google.image_family = 'ubuntu-2004-lts'
+
+    override.ssh.username = "dan.alvizu"
+    override.ssh.private_key_path = "~/.ssh/id_ed25519"
+  end
+  config.vm.synced_folder ".", "/vagrant", type: "rsync"
+  config.exec.commands '*', directory: '/vagrant'
+end
+
