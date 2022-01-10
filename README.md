@@ -128,11 +128,28 @@ OpenJDK Runtime Environment (build 17+35-2724)
 OpenJDK 64-Bit Server VM (build 17+35-2724, mixed mode, sharing)
 ```
 
+## `experiment-4`
+
+Build platform (https://search.maven.org/artifact/com.swirlds/swirlds-platform)
+
+* multi-module build
+* complex project
+
+
 ### Observations
 
-Both produced artifacts are bit by bit identical copies
+* Timestamps seem to be set to seconds since epic but are sensitive to the
+  timezone of the system. Resetting the timezone seems to fix this, and
+  I am guessing it is an issue w/ the build
+* module-info.java issues: https://issues.apache.org/jira/browse/MJAR-275
+** Rebuild w/ early access JDK18 appears to fix this, however the .jar files themselves
+   appear to also contain a timestamp. I expect this is due to how they are being
+   'deployed' by file system copy.
 
 ### Conclusion
 
-Maven is capable of making an identical bit-by-bit .jar when run on
-different versions of OpenJDK
+* JDK9-JDK17 artifacts cannot be built bit for bit identically if they are
+  using module-info.java due to limitations of the JDK. JDK 18 contains fixes to address
+  these
+
+

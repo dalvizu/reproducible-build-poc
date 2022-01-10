@@ -1,4 +1,6 @@
 */target/*
 */.mvn/wrapper/maven-wrapper.jar
 */.vagrant/*
-
+*/secrets.txt
+experiment-4/results/**
+experiment-4/*-platform/
