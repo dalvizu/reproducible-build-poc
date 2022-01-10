@@ -152,4 +152,18 @@ Build platform (https://search.maven.org/artifact/com.swirlds/swirlds-platform)
   using module-info.java due to limitations of the JDK. JDK 18 contains fixes to address
   these
 
+## `experiment-5`
+
+Run on windows!
+
+### Observations
+
+Line endings are different. This matches advice from maven guide
+(https://maven.apache.org/guides/mini/guide-reproducible-builds.html)
+
+> Generally give different results on Windows and Unix because of different newlines. (carriage return linefeed on Windows, linefeed on Unixes)
+
+### Conclusion
+ * Windows and nix derivatives cannot build bit for bit identical copies of the same binary
+
 
