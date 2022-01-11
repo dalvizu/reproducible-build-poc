@@ -1,0 +1,61 @@
+--- results/1/bundle.tar
++++ results/2/image.tar
+├── file list
+│ @@ -1,15 +1,15 @@
+│ --rw-r--r--   0        0        0     1020 2022-01-11 00:04:44.000000 6333b792a26d69d47d92897b411c3baca73048689e744f08a4042c15d9a73ebd.json
+│ -drwxr-xr-x   0        0        0        0 2022-01-11 00:04:44.000000 760b57671b9dff6192479676e4f87696991baf8d113db54ea8a7204f047cf730/
+│ --rw-r--r--   0        0        0        3 2022-01-11 00:04:44.000000 760b57671b9dff6192479676e4f87696991baf8d113db54ea8a7204f047cf730/VERSION
+│ --rw-r--r--   0        0        0      401 2022-01-11 00:04:44.000000 760b57671b9dff6192479676e4f87696991baf8d113db54ea8a7204f047cf730/json
+│ --rw-r--r--   0        0        0 68047872 2022-01-11 00:04:44.000000 760b57671b9dff6192479676e4f87696991baf8d113db54ea8a7204f047cf730/layer.tar
+│ -drwxr-xr-x   0        0        0        0 2022-01-11 00:04:44.000000 78ff622075999f515e817fa6fd6aa639cc2f0ac451e793c26fe62fe9e356c516/
+│ --rw-r--r--   0        0        0        3 2022-01-11 00:04:44.000000 78ff622075999f515e817fa6fd6aa639cc2f0ac451e793c26fe62fe9e356c516/VERSION
+│ --rw-r--r--   0        0        0      866 2022-01-11 00:04:44.000000 78ff622075999f515e817fa6fd6aa639cc2f0ac451e793c26fe62fe9e356c516/json
+│ --rw-r--r--   0        0        0     5632 2022-01-11 00:04:44.000000 78ff622075999f515e817fa6fd6aa639cc2f0ac451e793c26fe62fe9e356c516/layer.tar
+│ -drwxr-xr-x   0        0        0        0 2022-01-11 00:04:44.000000 8ef727ee516a3220e7a545d008a7b404e622abf86a86dcd9d48aa693ccc71197/
+│ --rw-r--r--   0        0        0        3 2022-01-11 00:04:44.000000 8ef727ee516a3220e7a545d008a7b404e622abf86a86dcd9d48aa693ccc71197/VERSION
+│ --rw-r--r--   0        0        0      477 2022-01-11 00:04:44.000000 8ef727ee516a3220e7a545d008a7b404e622abf86a86dcd9d48aa693ccc71197/json
+│ --rw-r--r--   0        0        0     2048 2022-01-11 00:04:44.000000 8ef727ee516a3220e7a545d008a7b404e622abf86a86dcd9d48aa693ccc71197/layer.tar
+│ +-rw-r--r--   0        0        0     1834 2022-01-11 00:08:50.000000 2d83595e1e94d7cd874920ac0fa3853e7f9ba9e553458b544fe8b10d546a33b2.json
+│ +drwxr-xr-x   0        0        0        0 2022-01-11 00:08:50.000000 df0788731d1e452744a114bfa46df2cadb43613094cf54dd660e2a8ab0aa9994/
+│ +-rw-r--r--   0        0        0        3 2022-01-11 00:08:50.000000 df0788731d1e452744a114bfa46df2cadb43613094cf54dd660e2a8ab0aa9994/VERSION
+│ +-rw-r--r--   0        0        0     1191 2022-01-11 00:08:50.000000 df0788731d1e452744a114bfa46df2cadb43613094cf54dd660e2a8ab0aa9994/json
+│ +-rw-r--r--   0        0        0     5632 2022-01-11 00:08:50.000000 df0788731d1e452744a114bfa46df2cadb43613094cf54dd660e2a8ab0aa9994/layer.tar
+│ +drwxr-xr-x   0        0        0        0 2022-01-11 00:08:50.000000 e4d10144087012f61d04e0922acf6f94631cbfab9512ac40580f1edb72210fa6/
+│ +-rw-r--r--   0        0        0        3 2022-01-11 00:08:50.000000 e4d10144087012f61d04e0922acf6f94631cbfab9512ac40580f1edb72210fa6/VERSION
+│ +-rw-r--r--   0        0        0      401 2022-01-11 00:08:50.000000 e4d10144087012f61d04e0922acf6f94631cbfab9512ac40580f1edb72210fa6/json
+│ +-rw-r--r--   0        0        0 75156480 2022-01-11 00:08:50.000000 e4d10144087012f61d04e0922acf6f94631cbfab9512ac40580f1edb72210fa6/layer.tar
+│ +drwxr-xr-x   0        0        0        0 2022-01-11 00:08:50.000000 e7b2f4fac02681500632cafd54656ff6e2a1c7bede726d6cc657f41c3a83b13f/
+│ +-rw-r--r--   0        0        0        3 2022-01-11 00:08:50.000000 e7b2f4fac02681500632cafd54656ff6e2a1c7bede726d6cc657f41c3a83b13f/VERSION
+│ +-rw-r--r--   0        0        0      477 2022-01-11 00:08:50.000000 e7b2f4fac02681500632cafd54656ff6e2a1c7bede726d6cc657f41c3a83b13f/json
+│ +-rw-r--r--   0        0        0     2048 2022-01-11 00:08:50.000000 e7b2f4fac02681500632cafd54656ff6e2a1c7bede726d6cc657f41c3a83b13f/layer.tar
+│  -rw-r--r--   0        0        0      362 1970-01-01 00:00:00.000000 manifest.json
+│  -rw-r--r--   0        0        0       95 1970-01-01 00:00:00.000000 repositories
+├── manifest.json
+│ ├── Pretty-printed
+│ │ @@ -1,13 +1,13 @@
+│ │  [
+│ │      {
+│ │ -        "Config": "6333b792a26d69d47d92897b411c3baca73048689e744f08a4042c15d9a73ebd.json",
+│ │ +        "Config": "2d83595e1e94d7cd874920ac0fa3853e7f9ba9e553458b544fe8b10d546a33b2.json",
+│ │          "Layers": [
+│ │ -            "760b57671b9dff6192479676e4f87696991baf8d113db54ea8a7204f047cf730/layer.tar",
+│ │ -            "8ef727ee516a3220e7a545d008a7b404e622abf86a86dcd9d48aa693ccc71197/layer.tar",
+│ │ -            "78ff622075999f515e817fa6fd6aa639cc2f0ac451e793c26fe62fe9e356c516/layer.tar"
+│ │ +            "e4d10144087012f61d04e0922acf6f94631cbfab9512ac40580f1edb72210fa6/layer.tar",
+│ │ +            "e7b2f4fac02681500632cafd54656ff6e2a1c7bede726d6cc657f41c3a83b13f/layer.tar",
+│ │ +            "df0788731d1e452744a114bfa46df2cadb43613094cf54dd660e2a8ab0aa9994/layer.tar"
+│ │          ],
+│ │          "RepoTags": [
+│ │              "dalvizu-test:latest"
+│ │          ]
+│ │      }
+│ │  ]
+├── repositories
+│ ├── Pretty-printed
+│ │ @@ -1,5 +1,5 @@
+│ │  {
+│ │      "dalvizu-test": {
+│ │ -        "latest": "78ff622075999f515e817fa6fd6aa639cc2f0ac451e793c26fe62fe9e356c516"
+│ │ +        "latest": "df0788731d1e452744a114bfa46df2cadb43613094cf54dd660e2a8ab0aa9994"
+│ │      }
+│ │  }

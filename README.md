@@ -167,3 +167,15 @@ Line endings are different. This matches advice from maven guide
  * Windows and nix derivatives cannot build bit for bit identical copies of the same binary
 
 
+## `experiment-6`
+
+Docker
+
+### Observations
+
+Dates are wrong
+
+### Conclusion
+
+Docker can built artifacts w/ different timestamps on file resulting in different images
+
